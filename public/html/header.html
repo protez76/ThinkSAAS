@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="zh-CN">
+<html lang="tr-TR">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="content-language" content="zh-CN" />
+    <meta http-equiv="content-language" content="tr-TR" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="applicable-device" content="pc,mobile">
     <meta name="robots" content="all" />
@@ -72,7 +72,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{SITE_URL}">首页</a>
+                    <a class="nav-link" href="{SITE_URL}">Ana Sayfa</a>
                 </li>
 
                 {php doAction('pub_header_nav')}
@@ -81,12 +81,12 @@
         </div>
 
 
-        <div class="mr-3"><a class="text-light" href="{tsUrl('search')}"><i class="fas fa-search"></i>搜索</a></div>
+        <div class="mr-3"><a class="text-light" href="{tsUrl('search')}"><i class="fas fa-search"></i>Arama</a></div>
 
 
         {if $GLOBALS['TS_USER']}
         <div class="mr-3">
-            <a class="text-light" href="{tsUrl('message','my')}"><span class="badge badge-pill badge-light" id="newmsg">0</span>  消息</a>
+            <a class="text-light" href="{tsUrl('message','my')}"><span class="badge badge-pill badge-light" id="newmsg">0</span>  Yeni Mesaj</a>
         </div>
         {/if}
 
@@ -104,27 +104,27 @@
             <div class="ts-dropdown dropdown-list pull-right">
                 <ul class="ts-dropdown-list">
                     <li><a href="{tsUrl('my')}" >我的社区</a></li>
-                    <li><a href="{tsUrl('my','setting',array('ts'=>'base'))}" >设置</a></li>
+                    <li><a href="{tsUrl('my','setting',array('ts'=>'base'))}" >Ayarlar</a></li>
                     {if $GLOBALS['TS_SITE']['isinvite']=='1'}
                     <li>
-                        <a href="{tsUrl('user','invite')}">邀请</a>
+                        <a href="{tsUrl('user','invite')}">Davet et</a>
                     </li>
                     {/if}
 
                     {if $GLOBALS['TS_USER']['isadmin']=='1'}
                     <li>
-                        <a target="_blank" href="{SITE_URL}index.php?app=system">管理</a>
+                        <a target="_blank" href="{SITE_URL}index.php?app=system">Yönetim</a>
                     </li>
                     {/if}
-                    <li><a href="{tsUrl('user','login',array(ts=>out))}">退出</a></li>
+                    <li><a href="{tsUrl('user','login',array(ts=>out))}">Çıkış</a></li>
                 </ul>
             </div>
 
 
             {else}
 
-            <a class="btn btn-info btn-sm" href="{tsUrl('user','login')}">登录</a>
-            <a class="btn btn-success btn-sm" href="{tsUrl('user','register')}">注册</a>
+            <a class="btn btn-info btn-sm" href="{tsUrl('user','login')}">Giriş</a>
+            <a class="btn btn-success btn-sm" href="{tsUrl('user','register')}">Kayıt Ol</a>
 
             {/if}
 
